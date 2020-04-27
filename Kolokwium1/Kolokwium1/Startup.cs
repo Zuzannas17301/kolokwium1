@@ -27,8 +27,8 @@ namespace Kolokwium1
         public void ConfigureServices(IServiceCollection services)
         {
           
-            services.AddTransient<IDbService, SqlServerService>();
-            services.AddSingleton<IDeleteService, SqlDeleteServerService>();
+            services.AddSingleton<IDbService, SqlServerService>();
+            services.AddTransient<IDeleteService, SqlDeleteServerService>();
             services.AddControllers();
         }
 
