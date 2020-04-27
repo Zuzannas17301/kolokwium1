@@ -41,7 +41,7 @@ namespace Kolokwium1.Services
                         Name = (dataReader["Name"].ToString()),
                         Description = (dataReader["Description"].ToString()),
                         Type = (dataReader["Type"].ToString()),
-                        PrescitionList = new List<Presciption>()
+                        PrescriptionList = new List<Prescription>()
                     };
 
                     command.CommandText =
@@ -70,7 +70,7 @@ namespace Kolokwium1.Services
                         command.CommandText =
                             $"SELECT Date, DueDate, IdPatient, IdDoctor FROM Prescription WHERE IdPrescription = {idPres} order by Date desc";
                         dataReader = command.ExecuteReader();
-                        medicamentDetails.PrescitionList.Add(new Presciption()
+                        medicamentDetails.PrescriptionList.Add(new Prescription()
                         {
                             IdPrescription = idPres,
                             Date = DateTime.Parse((string) dataReader["Date".ToString()]),

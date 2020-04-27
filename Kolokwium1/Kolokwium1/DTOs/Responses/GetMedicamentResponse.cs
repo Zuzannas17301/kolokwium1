@@ -8,6 +8,6 @@ namespace Kolokwium1.DTOs.Responses
         public string Name { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
-        public List<Presciption> PrescitionList { get; set; } 
+        public List<Prescription> PrescriptionList { get; set; } 
     }
 }

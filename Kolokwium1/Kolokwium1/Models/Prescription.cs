@@ -2,7 +2,7 @@
 
 namespace Kolokwium1.Models
 {
-    public class Presciption
+    public class Prescription
     {
         public int IdPrescription { get; set; }
         public DateTime Date { get; set; }
